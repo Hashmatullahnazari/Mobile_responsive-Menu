@@ -1,0 +1,134 @@
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Style the header with a grey background and some padding */
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: #f1f1f1;
+
+}
+
+/* Style the header links */
+
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header .logo {
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 70px;
+  color: limegreen;
+}
+
+
+/* Change the background color on mouse-over */
+.header ul li a:hover {
+  background-color: #1E90FF;
+  color: black;
+}
+
+/* Style the active/current link*/
+.header-right ul li a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+  line-height: 40px;
+}
+
+.header-right ul{
+  list-style-type: none;
+  display: block;
+}
+
+.header-right ul li{
+ display: inline-block;
+  
+}
+
+.header-right ul li a 
+{
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 4px; 
+  font-size: 18px; 
+ 
+}
+
+
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+
+.toggle
+{
+  position: absolute;
+  right: 0;
+  top: 17px;
+  display: none;
+
+}
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+
+@media only screen and (min-width: 601px){
+    .header-right ul{
+        display: block!important;
+    }
+}
+@media screen and (max-width:600px) {
+  .header 
+  {
+
+   float: none;
+    height: auto;
+  }
+.header .logo
+{
+  float:none;
+}
+  .header ul {
+    float: none;
+    display: none;
+    padding: 0;
+
+    
+  }
+  .header ul li 
+  {
+    float: none;
+    display: block;
+          transition: 0.9s;
+
+  }
+  
+  .header ul li a
+  {
+    float: none;
+    display: block;
+    
+    
+  }
+  .header-right {
+    float: none;
+  }
+  
+  .toggle
+  {
+    position: absolute;
+    display: block;
+    padding-right: 5px;
+  }
+}
