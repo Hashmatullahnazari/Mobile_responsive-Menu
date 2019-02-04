@@ -5,6 +5,6 @@ $(document).ready(function(){
   });
 });
 
-  function myFunction() {
-            location.reload();
-         }
+function myFunction(x) {
+  x.classList.toggle("change");
+}
